@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BitGet Withdrawals | All Withdrawals Pending</title>
+    <title>BitGet Withdrawals | All 8/9 Processing</title>
     <!-- Completely disable cache -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -47,7 +47,7 @@
             gap: 10px;
         }
         
-        .status-pending {
+        .status-processing {
             color: #ffa500;
         }
         
@@ -98,14 +98,14 @@
             font-weight: 600;
         }
         
-        .pending-indicator {
+        .processing-indicator {
             display: flex;
             align-items: center;
             gap: 8px;
             color: #ffa500;
         }
         
-        .pending-dot {
+        .processing-dot {
             width: 8px;
             height: 8px;
             background-color: #ffa500;
@@ -136,7 +136,7 @@
         .wallet-icon {
             width: 50px;
             height: 50px;
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            background: linear-gradient(135deg, #ffa500 0%, #ff8c00 100%);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -145,12 +145,12 @@
         }
         
         .wallet-icon.second {
-            background: linear-gradient(135deg, #ffa500 0%, #ff8c00 100%);
+            background: linear-gradient(135deg, #00ff88 0%, #00cc66 100%);
         }
         
         .exchange-icon {
             font-size: 2rem;
-            color: #3498db;
+            color: #ffa500;
         }
         
         .wallet-info h3 {
@@ -181,7 +181,7 @@
         .balance-display .amount {
             font-size: 2.5rem;
             font-weight: 700;
-            color: #3498db;
+            color: #ffa500;
         }
         
         .withdrawals-container {
@@ -216,22 +216,12 @@
         }
         
         .withdrawal-row:hover {
-            background-color: rgba(52, 152, 219, 0.05);
+            background-color: rgba(255, 165, 0, 0.05);
         }
         
         .withdrawal-row.active {
-            background-color: rgba(52, 152, 219, 0.1);
-            border-left: 3px solid #3498db;
-        }
-        
-        .withdrawal-row.in-progress {
             background-color: rgba(255, 165, 0, 0.1);
             border-left: 3px solid #ffa500;
-        }
-        
-        .withdrawal-row.pending {
-            background-color: rgba(255, 71, 87, 0.1);
-            border-left: 3px solid #ff4757;
         }
         
         .withdrawal-row:nth-child(even) {
@@ -239,7 +229,7 @@
         }
         
         .withdrawal-row:nth-child(even):hover {
-            background-color: rgba(52, 152, 219, 0.05);
+            background-color: rgba(255, 165, 0, 0.05);
         }
         
         .withdrawal-status {
@@ -250,24 +240,14 @@
             font-weight: 600;
         }
         
-        .withdrawal-status.in-progress {
+        .withdrawal-status.processing {
             background-color: rgba(255, 165, 0, 0.1);
             color: #ffa500;
         }
         
-        .withdrawal-status.pending {
-            background-color: rgba(255, 71, 87, 0.1);
-            color: #ff4757;
-        }
-        
-        .withdrawal-status.processing {
-            background-color: rgba(52, 152, 219, 0.1);
-            color: #3498db;
-        }
-        
         .withdrawal-amount {
             font-weight: 600;
-            color: #3498db;
+            color: #ffa500;
         }
         
         .withdrawal-time {
@@ -291,16 +271,8 @@
         
         .progress-fill-small {
             height: 100%;
-            background: linear-gradient(to right, #3498db, #2980b9);
-            border-radius: 3px;
-        }
-        
-        .progress-fill-small.warning {
             background: linear-gradient(to right, #ffa500, #ff8c00);
-        }
-        
-        .progress-fill-small.critical {
-            background: linear-gradient(to right, #ff4757, #ff6b81);
+            border-radius: 3px;
         }
         
         .right-sidebar {
@@ -335,7 +307,7 @@
             padding: 12px;
             background: transparent;
             border: none;
-            color: #3498db;
+            color: #ffa500;
             font-family: monospace;
             font-size: 0.9rem;
             text-align: center;
@@ -415,15 +387,15 @@
         }
         
         .btn-primary {
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
-            color: #fff;
+            background: linear-gradient(135deg, #00ff88 0%, #00cc66 100%);
+            color: #000;
             font-weight: 700;
         }
         
         .btn-primary:hover {
-            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            background: linear-gradient(135deg, #00ff88 0%, #00cc66 100%);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 255, 136, 0.2);
         }
         
         .volume-info {
@@ -451,16 +423,12 @@
             font-weight: 600;
         }
         
-        .blue {
-            color: #3498db;
-        }
-        
         .orange {
             color: #ffa500;
         }
         
-        .red {
-            color: #ff4757;
+        .green {
+            color: #00ff88;
         }
         
         /* Scrollbar styling */
@@ -496,18 +464,18 @@
         
         .progress-fill {
             height: 100%;
-            background: linear-gradient(to right, #3498db, #2980b9);
-            width: 50%;
+            background: linear-gradient(to right, #ffa500, #ff8c00);
+            width: 88%;
             border-radius: 3px;
             transition: width 0.5s ease;
         }
         
         .details-box {
-            background-color: rgba(52, 152, 219, 0.05);
+            background-color: rgba(255, 165, 0, 0.05);
             border-radius: 10px;
             padding: 20px;
             margin-top: 20px;
-            border: 1px solid #3498db;
+            border: 1px solid #ffa500;
             display: none;
         }
         
@@ -516,33 +484,15 @@
             animation: fadeIn 0.5s ease;
         }
         
-        .details-box.warning {
-            background-color: rgba(255, 165, 0, 0.05);
-            border: 1px solid #ffa500;
-        }
-        
-        .details-box.critical {
-            background-color: rgba(255, 71, 87, 0.05);
-            border: 1px solid #ff4757;
-        }
-        
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
         
         .details-box h4 {
-            color: #3498db;
+            color: #ffa500;
             margin-bottom: 15px;
             text-align: center;
-        }
-        
-        .details-box.warning h4 {
-            color: #ffa500;
-        }
-        
-        .details-box.critical h4 {
-            color: #ff4757;
         }
         
         .details-grid {
@@ -596,25 +546,19 @@
         }
         
         .step-icon.completed {
-            background-color: #3498db;
-            color: #fff;
+            background-color: #00ff88;
+            color: #000;
         }
         
-        .step-icon.in-progress {
+        .step-icon.current {
             background-color: #ffa500;
             color: #000;
             animation: pulse 1.5s infinite;
         }
         
         .step-icon.pending {
-            background-color: #ff4757;
-            color: #fff;
-        }
-        
-        .step-icon.current {
-            background-color: #3498db;
-            color: #fff;
-            animation: pulse 1.5s infinite;
+            background-color: #333;
+            color: #888;
         }
         
         .step-info {
@@ -629,17 +573,6 @@
         .step-info p {
             color: #888;
             font-size: 0.8rem;
-        }
-        
-        .issue-tag {
-            display: inline-block;
-            padding: 3px 8px;
-            background-color: #ff4757;
-            color: white;
-            border-radius: 4px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            margin-left: 5px;
         }
         
         .total-summary {
@@ -660,13 +593,13 @@
         .total-summary .total-amount {
             font-size: 2.8rem;
             font-weight: 700;
-            color: #3498db;
+            color: #ffa500;
             margin-bottom: 5px;
         }
         
         .total-summary .total-usd {
             font-size: 1.2rem;
-            color: #3498db;
+            color: #ffa500;
         }
         
         .save-status {
@@ -705,7 +638,7 @@
         .bitget-logo .logo-icon {
             width: 40px;
             height: 40px;
-            background: linear-gradient(135deg, #3498db 0%, #ffa500 100%);
+            background: linear-gradient(135deg, #ffa500 0%, #00ff88 100%);
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -722,9 +655,9 @@
             justify-content: space-between;
             margin-top: 15px;
             padding: 15px;
-            background-color: rgba(52, 152, 219, 0.05);
+            background-color: rgba(255, 165, 0, 0.05);
             border-radius: 8px;
-            border: 1px solid #3498db;
+            border: 1px solid #ffa500;
         }
         
         .status-item {
@@ -742,35 +675,31 @@
             font-weight: 600;
         }
         
-        .pending-alert {
-            background-color: rgba(255, 165, 0, 0.1);
+        .receiver-address {
+            background-color: rgba(0, 255, 136, 0.05);
             border-radius: 8px;
             padding: 15px;
             margin-top: 20px;
-            border: 1px solid #ffa500;
+            border: 1px solid #00ff88;
             text-align: center;
         }
         
-        .pending-alert i {
-            color: #ffa500;
+        .receiver-address i {
+            color: #00ff88;
             font-size: 1.5rem;
             margin-bottom: 10px;
         }
         
-        .progress-time {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 15px;
+        .address-display {
+            font-family: monospace;
+            font-size: 0.9rem;
+            color: #00ff88;
+            word-break: break-all;
+            margin: 10px 0;
             padding: 10px;
             background-color: rgba(0, 0, 0, 0.3);
-            border-radius: 8px;
+            border-radius: 5px;
             border: 1px solid #333;
-        }
-        
-        .progress-time i {
-            color: #ffa500;
         }
         
         @media (max-width: 1200px) {
@@ -827,22 +756,22 @@
 <body>
     <div class="container">
         <div class="status-indicator">
-            <div class="status-badge status-pending">
+            <div class="status-badge status-processing">
                 <div class="status-dot"></div>
-                <span>BITGET WITHDRAWALS: ALL PENDING</span>
+                <span>BITGET WITHDRAWALS: ALL 8/9 PROCESSING</span>
             </div>
             <div class="countdown-timer" id="countdownTimer">
-                Status: <span id="statusDisplay" style="color: #ffa500;">0/10 Completed</span>
+                Status: <span id="statusDisplay" style="color: #ffa500;">10/10 Processing</span>
             </div>
         </div>
         
         <div class="main-dashboard">
             <div class="trading-card">
                 <div class="card-header">
-                    <h2>BITGET WITHDRAWAL MOVEMENTS - ALL PENDING</h2>
-                    <div class="pending-indicator">
-                        <div class="pending-dot"></div>
-                        <span>NO WITHDRAWALS COMPLETED</span>
+                    <h2>BITGET WITHDRAWAL MOVEMENTS - ALL 8/9</h2>
+                    <div class="processing-indicator">
+                        <div class="processing-dot"></div>
+                        <span>ALL WITHDRAWALS PROCESSING</span>
                     </div>
                 </div>
                 
@@ -863,17 +792,17 @@
                     
                     <div class="wallet">
                         <div class="wallet-icon second">
-                            <i class="fas fa-clock"></i>
+                            <i class="fas fa-wallet"></i>
                         </div>
                         <div class="wallet-info">
-                            <h3>EXTERNAL WALLET</h3>
-                            <p>All Withdrawals Pending</p>
+                            <h3>RECEIVER WALLET</h3>
+                            <p>Same Address for All</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="balance-display">
-                    <h3>TOTAL WITHDRAWN AMOUNT (PENDING)</h3>
+                    <h3>TOTAL WITHDRAWN AMOUNT</h3>
                     <div class="amount" id="totalWithdrawn">100,000</div>
                     <div class="subtext" style="color: #666; margin-top: 5px; font-size: 0.9rem;">USDT (10 withdrawals × 10,000 USDT)</div>
                 </div>
@@ -884,26 +813,26 @@
                         <p id="totalWithdrawals">10</p>
                     </div>
                     <div class="volume-item">
-                        <h4>COMPLETED</h4>
-                        <p id="completedWithdrawals" style="color: #ff4757;">0</p>
+                        <h4>APPROVAL STATUS</h4>
+                        <p id="approvalStatus" style="color: #ffa500;">8/9 All</p>
                     </div>
                     <div class="volume-item">
                         <h4>ESTIMATED TIME</h4>
-                        <p id="estimatedTime" style="color: #ffa500;">24-48 Hours</p>
+                        <p id="estimatedTime" style="color: #00ff88;">12-24 Hours</p>
                     </div>
                 </div>
                 
                 <div class="time-progress">
                     <div class="progress-header">
                         <span>Processing Started: <span id="elapsedTime" style="color: #ffa500;">2 Days Ago</span></span>
-                        <span>Status: <span id="remainingTime" style="color: #ff4757;">All Pending</span></span>
+                        <span>All Withdrawals: <span id="remainingTime" style="color: #00ff88;">8/9 Steps</span></span>
                     </div>
                     <div class="progress-bar">
-                        <div class="progress-fill" id="timeProgress" style="width: 30%;"></div>
+                        <div class="progress-fill" id="timeProgress" style="width: 88%;"></div>
                     </div>
                 </div>
                 
-                <h3 style="margin: 20px 0 15px 0;">10,000 USDT WITHDRAWALS - ALL PENDING</h3>
+                <h3 style="margin: 20px 0 15px 0;">10,000 USDT WITHDRAWALS - ALL 8/9</h3>
                 <div class="withdrawals-container">
                     <div class="withdrawals-header">
                         <div>#</div>
@@ -923,12 +852,12 @@
                 </div>
                 
                 <div class="total-summary">
-                    <h3>TOTAL VALUE OF ALL 10 PENDING WITHDRAWALS</h3>
+                    <h3>TOTAL VALUE OF ALL 10 WITHDRAWALS</h3>
                     <div class="total-amount" id="totalWithdrawalsValue">100,000</div>
                     <div class="total-usd">USDT (10 withdrawals × 10,000 USDT each)</div>
-                    <div class="progress-time">
-                        <i class="fas fa-clock"></i>
-                        <span>All withdrawals are still pending - None have been completed yet</span>
+                    <div style="margin-top: 15px; font-size: 0.9rem; color: #888;">
+                        <span style="color: #ffa500;">All 10 withdrawals are at 8/9 approval step</span> | 
+                        <span style="color: #00ff88;">Same receiver address for all</span>
                     </div>
                 </div>
             </div>
@@ -956,52 +885,58 @@
                         </button>
                     </div>
                     
+                    <div class="receiver-address">
+                        <i class="fas fa-wallet"></i>
+                        <h4 style="color: #00ff88; margin-bottom: 10px;">RECEIVER ADDRESS</h4>
+                        <div class="address-display" id="receiverAddressDisplay">
+                            TLmgM7fcgN1SbVQ9VrypvB9811uzz1kkvz
+                        </div>
+                        <button class="btn btn-primary btn-small" onclick="copyReceiverAddress()" style="width: 100%; margin-top: 10px;">
+                            <i class="far fa-copy"></i> Copy Address
+                        </button>
+                    </div>
+                    
                     <div class="status-summary">
                         <div class="status-item">
-                            <h5>Completed</h5>
-                            <p style="color: #ff4757;">0</p>
-                        </div>
-                        <div class="status-item">
-                            <h5>In Progress</h5>
-                            <p style="color: #ffa500;">6</p>
-                        </div>
-                        <div class="status-item">
-                            <h5>Pending</h5>
-                            <p style="color: #ff4757;">4</p>
-                        </div>
-                        <div class="status-item">
                             <h5>Total</h5>
-                            <p style="color: #3498db;">10</p>
+                            <p style="color: #ffa500;">10</p>
+                        </div>
+                        <div class="status-item">
+                            <h5>Approval</h5>
+                            <p style="color: #00ff88;">8/9 All</p>
+                        </div>
+                        <div class="status-item">
+                            <h5>Amount Each</h5>
+                            <p style="color: #ffa500;">10,000</p>
                         </div>
                     </div>
                     
                     <div class="stats-grid">
                         <div class="stat-box">
                             <h4>ACCOUNT BALANCE</h4>
-                            <p id="accountBalance" style="color: #3498db;">80,000</p>
+                            <p id="accountBalance" style="color: #ffa500;">80,000</p>
                         </div>
                         <div class="stat-box">
                             <h4>WITHDRAWALS COUNT</h4>
                             <p id="withdrawalsCount">10</p>
                         </div>
                         <div class="stat-box">
-                            <h4>TOTAL PENDING</h4>
-                            <p id="totalPendingAmount" style="color: #ffa500;">$100,000</p>
+                            <h4>TOTAL WITHDRAWN</h4>
+                            <p id="totalWithdrawnAmount" style="color: #ffa500;">$100,000</p>
                         </div>
                         <div class="stat-box">
                             <h4>PROCESSING TIME</h4>
-                            <p id="processingTime" style="color: #ff4757;">2 Days</p>
+                            <p id="processingTime" style="color: #00ff88;">2 Days</p>
                         </div>
                     </div>
                     
-                    <div class="pending-alert">
-                        <i class="fas fa-clock"></i>
-                        <h4 style="color: #ffa500;">⏳ ALL WITHDRAWALS PENDING</h4>
+                    <div style="margin-top: 20px; padding: 15px; background-color: rgba(255, 165, 0, 0.05); border-radius: 8px; border: 1px solid #ffa500;">
+                        <h4 style="color: #ffa500; margin-bottom: 10px; text-align: center;">✅ ALL 8/9 PROCESSING</h4>
                         <p style="text-align: center; font-size: 0.9rem;">
-                            None of the 10 withdrawals have been completed yet
+                            All 10 withdrawals are at the same approval step (8/9)
                         </p>
-                        <p style="text-align: center; font-size: 0.85rem; margin-top: 5px; color: #ff9999;">
-                            All are in various stages of processing (6 in progress, 4 pending)
+                        <p style="text-align: center; font-size: 0.85rem; margin-top: 5px; color: #888;">
+                            Same receiver address for all withdrawals
                         </p>
                     </div>
                 </div>
@@ -1011,8 +946,8 @@
                     
                     <div style="margin-bottom: 20px; padding: 15px; background-color: #0a0a0a; border-radius: 8px; border: 1px solid #222;">
                         <h4 style="color: #888; margin-bottom: 10px;">PROCESSING OVERVIEW</h4>
-                        <p>All 10 withdrawals are still being processed</p>
-                        <p style="color: #888; font-size: 0.9rem; margin-top: 5px;">Started: 2 days ago | Estimated completion: 24-48 hours</p>
+                        <p>All 10 withdrawals at 8/9 approval step</p>
+                        <p style="color: #888; font-size: 0.9rem; margin-top: 5px;">Final step: Blockchain confirmation pending</p>
                     </div>
                     
                     <div class="approval-steps" id="approvalSteps">
@@ -1020,33 +955,36 @@
                     </div>
                     
                     <div class="controls">
-                        <button class="btn btn-primary" onclick="checkStatus()">
+                        <button class="btn btn-warning" onclick="checkStatus()">
                             <i class="fas fa-sync-alt"></i> CHECK STATUS
                         </button>
                         
-                        <button class="btn btn-warning" onclick="contactSupport()">
-                            <i class="fas fa-headset"></i> CONTACT SUPPORT
+                        <button class="btn btn-primary" onclick="viewBlockchain()">
+                            <i class="fas fa-link"></i> VIEW BLOCKCHAIN
                         </button>
                     </div>
                     
-                    <div style="margin-top: 25px; padding: 15px; background-color: rgba(52, 152, 219, 0.05); border-radius: 8px; border: 1px solid #3498db;">
-                        <i class="fas fa-clock" style="color: #3498db; display: block; text-align: center; font-size: 2rem; margin-bottom: 10px;"></i>
+                    <div style="margin-top: 25px; padding: 15px; background-color: rgba(255, 165, 0, 0.05); border-radius: 8px; border: 1px solid #ffa500;">
+                        <i class="fas fa-sync-alt fa-spin" style="color: #ffa500; display: block; text-align: center; font-size: 2rem; margin-bottom: 10px;"></i>
                         <p style="text-align: center;"><strong>ALL WITHDRAWALS PROCESSING</strong></p>
                         <p style="color: #aaa; font-size: 0.9rem; margin-top: 5px; text-align: center;">
-                            0/10 withdrawals completed. All are still in the approval process.
+                            10/10 withdrawals at 8/9 approval step. Final blockchain confirmation pending.
                         </p>
                     </div>
                     
-                    <div style="margin-top: 20px; padding: 15px; background-color: rgba(255, 165, 0, 0.05); border-radius: 8px; border: 1px solid #ffa500;">
-                        <h4 style="color: #ffa500; margin-bottom: 10px; text-align: center;">📊 STATUS BREAKDOWN</h4>
+                    <div style="margin-top: 20px; padding: 15px; background-color: rgba(0, 255, 136, 0.05); border-radius: 8px; border: 1px solid #00ff88;">
+                        <h4 style="color: #00ff88; margin-bottom: 10px; text-align: center;">📊 UNIFORM STATUS</h4>
                         <p style="text-align: center; font-size: 0.9rem;">
-                            <span style="color: #ffa500;">6 withdrawals</span>: In Progress (7/9, 8/9 steps)
+                            <span style="color: #ffa500;">10 withdrawals</span> × 
+                            <span style="color: #00ff88;">10,000 USDT</span> = 
+                            <span style="color: #ffa500;">100,000 USDT</span>
                         </p>
                         <p style="text-align: center; font-size: 0.9rem; margin-top: 5px;">
-                            <span style="color: #ff4757;">4 withdrawals</span>: Pending (5/9, 6/9 steps)
+                            <span style="color: #00ff88;">All at 8/9 step</span> | 
+                            <span style="color: #ffa500;">Same receiver address</span>
                         </p>
                         <p style="text-align: center; font-size: 0.85rem; margin-top: 5px; color: #888;">
-                            Initiated 2 days ago - Still processing
+                            Initiated 2 days ago - Final confirmation pending
                         </p>
                     </div>
                 </div>
@@ -1061,10 +999,11 @@
 
     <script>
         // App version - change this number for any important updates
-        const APP_VERSION = "5.0";
+        const APP_VERSION = "6.0";
         const accountId = "BG-7843-2901-5587";
+        const receiverAddress = "TLmgM7fcgN1SbVQ9VrypvB9811uzz1kkvz";
         
-        // State object with default values - ALL WITHDRAWALS PENDING
+        // State object with default values - ALL WITHDRAWALS 8/9
         let state = {
             totalWithdrawn: 100000,
             startTime: null,
@@ -1078,9 +1017,8 @@
             accountBalance: 80000,
             accountAge: "2 Days",
             withdrawalsCompleted: 0,
-            withdrawalsInProgress: 6,
-            withdrawalsPending: 4,
-            withdrawalsWithIssues: 10,
+            withdrawalsInProgress: 10,
+            withdrawalsPending: 0,
             appVersion: APP_VERSION,
             selectedWithdrawal: null
         };
@@ -1158,7 +1096,7 @@
                 state.appVersion = APP_VERSION;
                 
                 // Save to sessionStorage (cleared when tab is closed)
-                sessionStorage.setItem('bitgetAllPending_v' + APP_VERSION, JSON.stringify(state));
+                sessionStorage.setItem('bitget8of9_v' + APP_VERSION, JSON.stringify(state));
                 
                 // Show save status
                 const saveStatus = document.getElementById('saveStatus');
@@ -1174,7 +1112,7 @@
         // Load state from sessionStorage
         function loadState() {
             try {
-                const savedState = sessionStorage.getItem('bitgetAllPending_v' + APP_VERSION);
+                const savedState = sessionStorage.getItem('bitget8of9_v' + APP_VERSION);
                 
                 if (!savedState) {
                     console.log('No saved state found, creating new state');
@@ -1220,101 +1158,52 @@
             state.accountBalance = 80000;
             state.accountAge = "2 Days";
             state.withdrawalsCompleted = 0;
-            state.withdrawalsInProgress = 6;
-            state.withdrawalsPending = 4;
-            state.withdrawalsWithIssues = 10;
+            state.withdrawalsInProgress = 10;
+            state.withdrawalsPending = 0;
             state.appVersion = APP_VERSION;
             state.selectedWithdrawal = null;
             
-            // Generate withdrawals - ALL PENDING/IN PROGRESS
-            generateAllPendingWithdrawals();
+            // Generate withdrawals - ALL 8/9
+            generateAll8of9Withdrawals();
             
-            console.log('Initialized BitGet withdrawals - ALL PENDING v' + APP_VERSION);
+            console.log('Initialized BitGet withdrawals - ALL 8/9 v' + APP_VERSION);
             console.log('Total withdrawn: 100,000 USDT');
             console.log('Withdrawals: 10 × 10,000 USDT');
-            console.log('Completed: 0 withdrawals');
+            console.log('All at: 8/9 approval step');
+            console.log('Receiver address:', receiverAddress);
             console.log('Account ID:', accountId);
         }
         
-        // Generate 10 withdrawals - ALL PENDING/IN PROGRESS (NO COMPLETED)
-        function generateAllPendingWithdrawals() {
+        // Generate 10 withdrawals - ALL 8/9
+        function generateAll8of9Withdrawals() {
             const withdrawals = [];
             const times = ['2 days ago'];
-            const walletAddresses = [
-                '0xA9e24D3dF2d0039e6a48e3E4915e13d521382B39',
-                '0x4be35ec329343d7d9f548d42b0f8c17fffe07db4',
-                '0x8a12Bb5cE5F5E5E5e5E5e5e5e5e5e5e5e5e5e5',
-                '0xb794f5ea0ba39494ce839613fffba74279579268',
-                '0x1f9090aaE28b8a3dCeaDf281B0F12828e676c326'
-            ];
             
-            // Create 6 withdrawals in progress (7/9 or 8/9 steps)
-            for (let i = 1; i <= 6; i++) {
-                const walletAddress = walletAddresses[Math.floor(Math.random() * walletAddresses.length)];
+            // Create 10 withdrawals ALL 8/9
+            for (let i = 1; i <= 10; i++) {
                 const approvalSteps = 9;
-                const completedSteps = Math.random() > 0.5 ? 7 : 8;
-                const issues = [
-                    "Processing - manual review",
-                    "Address verification in progress",
-                    "KYC check ongoing",
-                    "Security review in progress"
-                ];
+                const completedSteps = 8; // ALL 8/9
                 
                 withdrawals.push({
                     id: i,
-                    status: "In Progress",
+                    status: "Processing",
                     amount: 10000,
                     time: times[0],
                     approval: `${completedSteps}/${approvalSteps}`,
                     progress: (completedSteps / approvalSteps) * 100,
-                    walletAddress: walletAddress,
-                    txHash: `Processing...`,
+                    walletAddress: receiverAddress,
+                    txHash: `0x${Array.from({length: 64}, () => 
+                        '0123456789abcdef'[Math.floor(Math.random() * 16)]
+                    ).join('')}`,
                     network: "BNB Smart Chain (BEP-20)",
                     fee: "1.5 USDT",
                     completedSteps: completedSteps,
                     totalSteps: approvalSteps,
-                    issue: issues[Math.floor(Math.random() * issues.length)],
-                    severity: completedSteps === 7 ? "warning" : "none"
+                    currentStep: "Blockchain Processing",
+                    nextStep: "Confirmation (Final)",
+                    note: "Awaiting blockchain confirmation - Final step"
                 });
             }
-            
-            // Create 4 pending withdrawals (5/9 or 6/9 steps)
-            for (let i = 7; i <= 10; i++) {
-                const walletAddress = walletAddresses[Math.floor(Math.random() * walletAddresses.length)];
-                const approvalSteps = 9;
-                const completedSteps = Math.random() > 0.5 ? 5 : 6;
-                const issues = [
-                    "Awaiting manual verification",
-                    "Risk assessment pending",
-                    "Compliance review required",
-                    "Address whitelist pending"
-                ];
-                
-                withdrawals.push({
-                    id: i,
-                    status: "Pending",
-                    amount: 10000,
-                    time: times[0],
-                    approval: `${completedSteps}/${approvalSteps}`,
-                    progress: (completedSteps / approvalSteps) * 100,
-                    walletAddress: walletAddress,
-                    txHash: `Pending...`,
-                    network: "BNB Smart Chain (BEP-20)",
-                    fee: "1.5 USDT",
-                    completedSteps: completedSteps,
-                    totalSteps: approvalSteps,
-                    issue: issues[Math.floor(Math.random() * issues.length)],
-                    severity: "critical"
-                });
-            }
-            
-            // Shuffle the withdrawals
-            withdrawals.sort(() => Math.random() - 0.5);
-            
-            // Reassign IDs to maintain order
-            withdrawals.forEach((withdrawal, index) => {
-                withdrawal.id = index + 1;
-            });
             
             state.withdrawals = withdrawals;
         }
@@ -1326,8 +1215,8 @@
             
             // Update withdrawal stats
             document.getElementById('totalWithdrawals').textContent = state.totalWithdrawals;
-            document.getElementById('completedWithdrawals').textContent = state.withdrawalsCompleted;
-            document.getElementById('estimatedTime').textContent = "24-48 Hours";
+            document.getElementById('approvalStatus').textContent = "8/9 All";
+            document.getElementById('estimatedTime').textContent = "12-24 Hours";
             
             // Update total withdrawals value
             const totalWithdrawalsValue = state.totalWithdrawals * state.withdrawalValue;
@@ -1336,8 +1225,11 @@
             // Update account stats
             document.getElementById('accountBalance').textContent = state.accountBalance.toLocaleString();
             document.getElementById('withdrawalsCount').textContent = state.totalWithdrawals;
-            document.getElementById('totalPendingAmount').textContent = "$" + totalWithdrawalsValue.toLocaleString();
+            document.getElementById('totalWithdrawnAmount').textContent = "$" + totalWithdrawalsValue.toLocaleString();
             document.getElementById('processingTime').textContent = "2 Days";
+            
+            // Update receiver address display
+            document.getElementById('receiverAddressDisplay').textContent = receiverAddress;
             
             // Update withdrawals list
             updateWithdrawalsList();
@@ -1362,20 +1254,18 @@
             
             state.withdrawals.forEach(withdrawal => {
                 const row = document.createElement('div');
-                row.className = `withdrawal-row ${withdrawal.status.toLowerCase().replace(' ', '-')} ${state.selectedWithdrawal && state.selectedWithdrawal.id === withdrawal.id ? 'active' : ''}`;
+                row.className = `withdrawal-row ${state.selectedWithdrawal && state.selectedWithdrawal.id === withdrawal.id ? 'active' : ''}`;
                 row.setAttribute('data-id', withdrawal.id);
-                
-                const progressColor = withdrawal.severity === 'critical' ? 'critical' : withdrawal.severity === 'warning' ? 'warning' : '';
                 
                 row.innerHTML = `
                     <div class="withdrawal-time">${withdrawal.id}</div>
-                    <div><span class="withdrawal-status ${withdrawal.status.toLowerCase().replace(' ', '-')}">${withdrawal.status}</span></div>
+                    <div><span class="withdrawal-status processing">${withdrawal.status}</span></div>
                     <div class="withdrawal-amount">${withdrawal.amount.toLocaleString()} USDT</div>
                     <div class="hide-mobile">${withdrawal.time}</div>
                     <div class="hide-mobile">${withdrawal.approval}</div>
                     <div class="progress-indicator">
                         <div class="progress-bar-small">
-                            <div class="progress-fill-small ${progressColor}" style="width: ${withdrawal.progress}%;"></div>
+                            <div class="progress-fill-small" style="width: ${withdrawal.progress}%;"></div>
                         </div>
                         <span>${withdrawal.completedSteps}/${withdrawal.totalSteps}</span>
                     </div>
@@ -1407,15 +1297,13 @@
                 const stepElement = document.createElement('div');
                 stepElement.className = 'step';
                 
-                // For the selected withdrawal
+                // For the selected withdrawal - ALL at step 8
                 let isCompleted = false;
                 let isCurrent = false;
-                let isPending = false;
                 
                 if (state.selectedWithdrawal) {
                     isCompleted = step.id <= state.selectedWithdrawal.completedSteps;
                     isCurrent = step.id === state.selectedWithdrawal.completedSteps + 1;
-                    isPending = step.id > state.selectedWithdrawal.completedSteps + 1;
                 }
                 
                 let iconClass = '';
@@ -1433,7 +1321,7 @@
                         ${iconContent}
                     </div>
                     <div class="step-info">
-                        <h5>${step.name}</h5>
+                        <h5>${step.name} ${isCurrent ? '(Current)' : ''}</h5>
                         <p>${step.description}</p>
                     </div>
                 `;
@@ -1456,32 +1344,17 @@
             // Show withdrawal details
             const detailsBox = document.getElementById('withdrawalDetails');
             
-            const boxClass = withdrawal.severity === 'critical' ? 'critical' : 
-                            withdrawal.severity === 'warning' ? 'warning' : '';
-            
-            detailsBox.className = `details-box active ${boxClass}`;
-            
-            let issueHtml = '';
-            if (withdrawal.issue) {
-                issueHtml = `
-                    <div class="detail-item" style="grid-column: span 2; background-color: ${withdrawal.severity === 'critical' ? 'rgba(255, 71, 87, 0.2)' : 'rgba(255, 165, 0, 0.2)'};">
-                        <h5>CURRENT STATUS</h5>
-                        <p style="color: ${withdrawal.severity === 'critical' ? '#ff4757' : '#ffa500'};">${withdrawal.issue}</p>
-                    </div>
-                `;
-            }
-            
             detailsBox.innerHTML = `
-                <h4>WITHDRAWAL #${withdrawal.id} - ${withdrawal.status.toUpperCase()}</h4>
+                <h4>WITHDRAWAL #${withdrawal.id} - 8/9 PROCESSING</h4>
                 
                 <div class="details-grid">
                     <div class="detail-item">
                         <h5>Amount</h5>
-                        <p style="color: #3498db;">${withdrawal.amount.toLocaleString()} USDT</p>
+                        <p style="color: #ffa500;">${withdrawal.amount.toLocaleString()} USDT</p>
                     </div>
                     <div class="detail-item">
                         <h5>Status</h5>
-                        <p style="color: ${withdrawal.status === 'In Progress' ? '#ffa500' : '#ff4757'};">${withdrawal.status}</p>
+                        <p style="color: #ffa500;">${withdrawal.status}</p>
                     </div>
                     <div class="detail-item">
                         <h5>Initiated</h5>
@@ -1492,31 +1365,29 @@
                         <p>${withdrawal.approval} steps</p>
                     </div>
                     <div class="detail-item">
-                        <h5>Network</h5>
-                        <p>${withdrawal.network}</p>
+                        <h5>Current Step</h5>
+                        <p style="color: #00ff88;">${withdrawal.currentStep}</p>
                     </div>
                     <div class="detail-item">
-                        <h5>Estimated Fee</h5>
-                        <p>${withdrawal.fee}</p>
+                        <h5>Next Step</h5>
+                        <p>${withdrawal.nextStep}</p>
                     </div>
-                    
-                    ${issueHtml}
                 </div>
                 
                 <div class="detail-item" style="grid-column: span 2;">
-                    <h5>Destination Wallet</h5>
-                    <p style="font-family: monospace; font-size: 0.9rem;">${withdrawal.walletAddress}</p>
+                    <h5>Destination Wallet (Same for All)</h5>
+                    <p style="font-family: monospace; font-size: 0.9rem; color: #00ff88;">${withdrawal.walletAddress}</p>
                 </div>
                 
                 <div class="detail-item" style="grid-column: span 2;">
                     <h5>Transaction Hash</h5>
-                    <p style="font-family: monospace; font-size: 0.9rem; color: #888;">${withdrawal.txHash}</p>
+                    <p style="font-family: monospace; font-size: 0.9rem;">${withdrawal.txHash}</p>
                 </div>
                 
                 <div style="margin-top: 15px; text-align: center;">
                     <p style="color: #888; font-size: 0.9rem;">
-                        <i class="fas fa-info-circle" style="color: #3498db;"></i>
-                        This withdrawal is still processing. Estimated completion: 24-48 hours.
+                        <i class="fas fa-info-circle" style="color: #ffa500;"></i>
+                        ${withdrawal.note}
                     </p>
                 </div>
             `;
@@ -1532,6 +1403,13 @@
             });
         }
         
+        // Copy receiver address
+        function copyReceiverAddress() {
+            navigator.clipboard.writeText(receiverAddress).then(() => {
+                alert('Receiver address copied to clipboard!');
+            });
+        }
+        
         // View on BitGet (simulated)
         function viewOnBitget() {
             alert('Redirecting to BitGet exchange... (This is a simulation)');
@@ -1539,15 +1417,16 @@
         
         // Check status
         function checkStatus() {
-            const pendingCount = state.withdrawals.filter(w => w.status === 'Pending').length;
-            const inProgressCount = state.withdrawals.filter(w => w.status === 'In Progress').length;
-            
-            alert(`Checking withdrawal status...\n\nCurrent Status:\n- Total Withdrawals: ${state.totalWithdrawals}\n- In Progress: ${inProgressCount}\n- Pending: ${pendingCount}\n- Completed: 0\n\nAll withdrawals initiated 2 days ago are still processing.`);
+            alert(`Checking withdrawal status...\n\nCurrent Status:\n- Total Withdrawals: ${state.totalWithdrawals}\n- All at: 8/9 approval step\n- Amount each: 10,000 USDT\n- Total: 100,000 USDT\n- Receiver: ${receiverAddress.substring(0, 12)}...\n\nAll withdrawals awaiting final blockchain confirmation.`);
         }
         
-        // Contact support
-        function contactSupport() {
-            alert(`Contacting BitGet Support...\n\nAll 10 withdrawals are still processing:\n- Initiated: 2 days ago\n- Status: 0 completed, 6 in progress, 4 pending\n- Amount: 100,000 USDT total\n\nSupport will investigate the delay.`);
+        // View blockchain
+        function viewBlockchain() {
+            if (state.selectedWithdrawal) {
+                alert(`Viewing blockchain for Withdrawal #${state.selectedWithdrawal.id}...\n\nTransaction Hash: ${state.selectedWithdrawal.txHash}\n\nNetwork: BNB Smart Chain (BEP-20)\n\nStatus: Pending confirmation (8/9 step)`);
+            } else {
+                alert('Please select a withdrawal first to view blockchain details.');
+            }
         }
         
         // Reset everything to start fresh (for testing)
@@ -1592,24 +1471,23 @@
             // Make reset function available from console
             window.resetApp = resetEverything;
             
-            console.log('💰 BITGET WITHDRAWALS - ALL PENDING LOADED!');
+            console.log('💰 BITGET WITHDRAWALS - ALL 8/9 LOADED!');
             console.log('Account ID:', accountId);
             console.log('Total withdrawals:', state.totalWithdrawals, '×', state.withdrawalValue.toLocaleString(), 'USDT');
-            console.log('Completed: 0 withdrawals');
-            console.log('In Progress: 6 withdrawals');
-            console.log('Pending: 4 withdrawals');
-            console.log('All withdrawals still processing - None completed');
+            console.log('All at: 8/9 approval step');
+            console.log('Receiver address:', receiverAddress);
+            console.log('All withdrawals sent to same address');
             console.log('To reset everything, run: resetApp()');
             
             // Show welcome message
             setTimeout(() => {
                 console.log('=========================================');
-                console.log('⏳ BITGET WITHDRAWALS - ALL PENDING');
+                console.log('🔄 BITGET WITHDRAWALS - ALL 8/9');
                 console.log('📤 10 Withdrawals × 10,000 USDT each');
-                console.log('❌ 0 withdrawals completed');
-                console.log('🔄 6 withdrawals in progress (7/9, 8/9 steps)');
-                console.log('⏸️  4 withdrawals pending (5/9, 6/9 steps)');
-                console.log('⏱️  Processing Time: 2 days (Still processing)');
+                console.log('✅ All at 8/9 approval step');
+                console.log('🎯 Same receiver address for all');
+                console.log('💳 Total: 100,000 USDT');
+                console.log('⏱️  Processing Time: 2 days (Final step pending)');
                 console.log('=========================================');
             }, 1000);
         };
