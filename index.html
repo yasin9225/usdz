@@ -695,7 +695,7 @@
             line-height: 1.4;
         }
         
-        /* Processing Time Section - ALL GREEN */
+        /* Processing Time Section - ALL ENGLISH */
         .processing-time-section {
             background: linear-gradient(135deg, rgba(0, 255, 136, 0.1) 0%, rgba(0, 204, 102, 0.1) 100%);
             border-radius: 10px;
@@ -715,18 +715,11 @@
         }
         
         .processing-time-section .english-text {
-            font-size: 1.1rem;
+            font-size: 1.5rem;
             color: #fff;
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
-        
-        .processing-time-section .arabic-text {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #00ff88;
+            font-weight: 700;
+            margin: 15px 0;
             text-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
-            margin: 10px 0;
         }
         
         .processing-time-section .note {
@@ -828,11 +821,10 @@
                     </div>
                 </div>
                 
-                <!-- Processing Time Section - ALL GREEN -->
+                <!-- Processing Time Section - ALL ENGLISH -->
                 <div class="processing-time-section">
                     <h3><i class="fas fa-clock"></i> PLATFORM PROCESSING NOTE</h3>
                     <div class="english-text">Processing Time: 20 minutes - 10 working hours</div>
-                    <div class="arabic-text">10 ساعات عمل</div>
                     <div class="note">Note: Please check your wallet. Funds should appear within this timeframe.</div>
                 </div>
                 
@@ -874,7 +866,7 @@
                     
                     <div class="arrival-time">
                         <h4>⏱️ CHECK YOUR WALLET</h4>
-                        <div class="time-range" id="arrivalTime">Please verify wallet balance</div>
+                        <div class="time-range" id="arrivalTime">Processing Time: 20 minutes - 10 working hours</div>
                         <div class="time-note">Funds are confirmed and should be visible in your wallet</div>
                     </div>
                 </div>
@@ -1029,7 +1021,7 @@
                         <div style="text-align: center; margin-top: 20px;">
                             <div style="font-size: 0.9rem; color: #aaa;">Completion Time:</div>
                             <div style="font-size: 1.1rem; color: #00ff88; font-weight: 600;">15:08 03/02/2026</div>
-                            <div style="font-size: 0.8rem; color: #aaa; margin-top: 5px;">Processing: 10 ساعات عمل</div>
+                            <div style="font-size: 0.8rem; color: #aaa; margin-top: 5px;">Processing: 20 min - 10 working hours</div>
                         </div>
                     </div>
                 </div>
@@ -1057,7 +1049,7 @@
                         </div>
                         <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
                             <span style="color: #888;">Processing Note:</span>
-                            <span style="color: #00ff88;">10 ساعات عمل</span>
+                            <span style="color: #00ff88;">20 min - 10 working hours</span>
                         </div>
                     </div>
                     
@@ -1077,7 +1069,7 @@
                             All transactions are fully confirmed and funds are in your wallet.
                         </p>
                         <p style="font-size: 0.85rem; margin-top: 5px; color: #aaa;">
-                            Note: Processing time 20 minutes - 10 ساعات عمل
+                            Note: Processing time 20 minutes - 10 working hours
                         </p>
                     </div>
                 </div>
@@ -1087,14 +1079,13 @@
 
     <script>
         // Configuration
-        const APP_VERSION = "8.0";
+        const APP_VERSION = "9.0";
         const accountId = "BG-7843-2901-5587";
         const receiverAddress = "TLmgM7fcgN1SbVQ9VrypvB9811uzz1kkvz";
         const totalWithdrawals = 10;
         const withdrawalAmount = 10000;
         const completionTime = "15:08";
         const completionDate = "03/02/2026";
-        const workingHoursArabic = "10 ساعات عمل";
         const processingTimeEnglish = "Processing Time: 20 minutes - 10 working hours";
         
         // REAL TRON TRANSACTION HASHES (Completed transactions)
@@ -1157,6 +1148,9 @@
             // Update wallet balance
             document.getElementById('walletBalance').textContent = `${state.walletBalance.toLocaleString()} USDT`;
             
+            // Update arrival time
+            document.getElementById('arrivalTime').textContent = processingTimeEnglish;
+            
             // Update withdrawals table
             updateWithdrawalsTable();
             
@@ -1193,12 +1187,12 @@
         
         // Check wallet balance
         function checkWalletBalance() {
-            alert(`✅ CHECK YOUR WALLET\n\nWallet Address: ${receiverAddress}\nExpected Balance: 100,000 USDT\n\nPlease check your wallet to confirm the funds have arrived.\nProcessing time: ${processingTimeEnglish}\n(${workingHoursArabic})`);
+            alert(`✅ CHECK YOUR WALLET\n\nWallet Address: ${receiverAddress}\nExpected Balance: 100,000 USDT\n\nPlease check your wallet to confirm the funds have arrived.\n${processingTimeEnglish}`);
         }
         
         // Refresh status
         function refreshStatus() {
-            alert(`✅ Status Refreshed!\n\nAll transactions are completed and confirmed.\nCompletion Time: ${completionTime} Today ${completionDate}\nProcessing Note: ${processingTimeEnglish} (${workingHoursArabic})\n\nPlease check your wallet to confirm the funds.`);
+            alert(`✅ Status Refreshed!\n\nAll transactions are completed and confirmed.\nCompletion Time: ${completionTime} Today ${completionDate}\n${processingTimeEnglish}\n\nPlease check your wallet to confirm the funds.`);
         }
         
         // View block explorer
